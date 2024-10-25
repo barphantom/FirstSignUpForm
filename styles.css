@@ -6,7 +6,40 @@
 
 .container {
     display: flex;
+}
+
+.left-side {
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+    width: 55%;
+    padding: 10px;
+
+}
+
+.content-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px black;
+    width: 100%;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    display: flex;
+    justify-content: left;
+    border: blueviolet solid 2px;
+    width: 100%;
 }
 
 .right-side {
