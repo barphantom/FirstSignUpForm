@@ -6,7 +6,6 @@
 
 .body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-
 }
 
 .container {
@@ -24,10 +23,10 @@
 
 .content-form {
     display: flex;
+    /*flex: 1;*/
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /*border: solid 1px black;*/
     width: 100%;
 }
 .content-form h2 {
@@ -49,8 +48,7 @@
 .divider-text::after {
     content: " ";
     flex: 1;
-    /*width: clamp(50px, 50vw, 50px);*/
-    border-bottom: 1px solid purple;
+    border-bottom: 1px solid black;
     margin: 0 15px;
 }
 
@@ -66,6 +64,7 @@
     width: 85px;
     height: 70px;
     left: 10px;
+    cursor: pointer;
 }
 
 .social-media-buttons {
@@ -78,10 +77,15 @@
 .social-button {
     width: 60px;
     height: 60px;
-    background-color: palegoldenrod;
+    background-color: #C8B1E7;
     border-radius: 50%;
     border: none;
     cursor: pointer;
+}
+.social-button:hover {
+    background-color: #B392DD;
+    transform: scale(1.05);
+    transition: transform .2s ease;
 }
 
 .social-button img {
@@ -97,12 +101,12 @@
 }
 
 .signup-form input {
-    background-color: palegoldenrod;
+    color: black;
+    background-color: #C8B1E7;
     border: none;
     border-radius: 25px;
     font-size: 2rem;
     line-height: 50px;
-    /*text-align: center;*/
     text-indent: 25px;
 }
 
@@ -110,14 +114,25 @@ input::placeholder {
     position: relative;
     bottom: 15px;
     left: 15px;
-    color: black;
+    color: white;
     font-size: 16px;
+}
+
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.password-container img {
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
 }
 
 .sign-up-button {
     padding: 15px 25px;
-    color: palegoldenrod;
-    background-color: black;
+    color: white;
+    background-color: #B444DA;
     border: none;
     border-radius: 25px;
     font-size: 18px;
@@ -125,7 +140,11 @@ input::placeholder {
     text-align: right;
 }
 .sign-up-button:hover {
-
+    background-color: #A328CC;
+}
+.sign-up-button:active {
+    background-color: #C266E1;
+    transform: translateY(1px);
 }
 
 .footer p {
@@ -134,7 +153,16 @@ input::placeholder {
 .footer p a {
     font-size: 18px;
     text-decoration: none;
-    /*color: blue;*/
+    font-weight: bold;
+    cursor: pointer;
+    color: #6D1C87;
+    transition: color 0.1s ease;
+}
+.footer p a:hover {
+    color: #A32ACB;
+}
+.footer p a:active {
+    color: #C8B1E7;
 }
 
 .right-side {
@@ -142,6 +170,6 @@ input::placeholder {
     min-height: 100vh;
     width: 45%;
     min-width: 30%;
-    background: url("artwork.jpg") no-repeat fixed center;
+    background: url("images/artwork.jpg") no-repeat fixed center;
     background-size: cover;
 }

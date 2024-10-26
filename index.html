@@ -10,21 +10,24 @@
 <div class="container">
     <div class="left-side">
         <div class="logo">
-            <img src="Logo.png" alt="#">
+            <img src="images/Logo.png" alt="#">
             <h3>Test logo</h3>
         </div>
         <div class="content-form">
             <h2>Sign up to Test Company</h2>
             <div class="social-media-buttons">
-                <button type="button" class="social-button facebook"><img src="facebook.svg" alt="Facebook"></button>
-                <button type="button" class="social-button google"><img src="google.svg" alt="Google"></button>
-                <button type="button" class="social-button apple"><img src="apple.svg" alt="Apple"></button>
+                <button type="button" class="social-button facebook"><img src="images/facebook.svg" alt="Facebook"></button>
+                <button type="button" class="social-button google"><img src="images/google.svg" alt="Google"></button>
+                <button type="button" class="social-button apple"><img src="images/apple.svg" alt="Apple"></button>
             </div>
             <p class="divider-text">or do via email</p>
             <form action="#" class="signup-form">
                 <input type="text" placeholder="  Your name" required>
                 <input type="email" placeholder="  Email address" required>
-                <input type="password" placeholder="  Password" required>
+                <div class="password-container">
+                    <input type="password" id="password" placeholder="  Password" required>
+                    <img id="togglePassword" src="images/eye.svg" alt="Show password">
+                </div>
             </form>
             <button class="sign-up-button" type="button">Sign up</button>
         </div>
@@ -32,10 +35,21 @@
             <p>Have an account? <a href="#">Sign in</a></p>
         </div>
     </div>
-    <div class="right-side">
-
-    </div>
+    <div class="right-side"></div>
 </div>
+<script>
+    const password = document.getElementById("password");
+    const togglePassword = document.getElementById("togglePassword");
 
+    togglePassword.addEventListener("click", function () {
+        if (password.getAttribute("type") === "password") {
+            password.setAttribute("type", "text");
+            togglePassword.setAttribute("src", "images/eye-crossed.svg");
+        } else {
+            password.setAttribute("type", "password");
+            togglePassword.setAttribute("src", "images/eye.svg");
+        }
+    });
+</script>
 </body>
 </html>
